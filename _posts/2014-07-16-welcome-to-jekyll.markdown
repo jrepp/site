@@ -1,24 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "First Post on New Site"
 date:   2014-07-16 04:19:09
-categories: jekyll update
+categories: update blog
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll]:    http://jekyllrb.com
+There's a bunch of changes underlying this new sitee. I've converted to using [jekyll](http://jekyllrb.com/) and [github](http://github.com). All source control is done through git. I have a few mirrors of my git repos now. Hosting is now being handled by [linode](http://linode.com) vs. textdrive. I really love the linode setup, monitoring and management. The prices are a bit more but I get a full VM that I can manage myself. I lost almost all of my content in the textdrive shutdown. Still hoping to get that back but it might not ever be recovered. Some of my larger personal projects I have archived copies of and have been migrating from svn to git. There's a lot to do to get things back up but it's a good excuse to modernize and move forward.
