@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Soundcloud EP"
+date:   2014-07-16 05:20:09
+categories: update blog music
+---
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/25850147&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+Here's a collection of songs I've done recently.
