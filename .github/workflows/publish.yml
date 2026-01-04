@@ -24,12 +24,12 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true
       - uses: actions/configure-pages@v5
-      - run: bundle exec jekyll build --destination _site
+      - run: bundle exec jekyll build --destination build/site
         env:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: build/site
 
   deploy:
     needs: build

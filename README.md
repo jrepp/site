@@ -5,6 +5,19 @@
 - `bundle install`
 - `./scripts/serve.py`
 
+## Publishing (local build for nginx)
+
+Build the site into an out-of-source directory (git ignored) so nginx can serve it:
+
+- `bundle install`
+- `JEKYLL_ENV=production bundle exec jekyll build --destination build/site`
+
+For RST-enabled builds, include the extra config:
+
+- `JEKYLL_ENV=production bundle exec jekyll build --destination build/site --config _config.yml,_config.rst.yml`
+
+Point nginx at `build/site` as the site root.
+
 ## reStructuredText (RST)
 
 This site can support `.rst` via `jekyll-rst` (self-hosted builds).
