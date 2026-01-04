@@ -10,3 +10,67 @@ github_username:  jrepp
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+
+# Keep tooling/private files out of the built site.
+exclude:
+  - scripts
+  - README.md
+  - archive/.blobs
+  - archive/.cache
+  - archive-blogspot
+  - archive-blogspot2
+  - exports
+  - secrets
+  - tools
+
+include:
+  - .well-known
+
+# Explicit nav order (used by _includes/header.html).
+nav_links:
+  - title: Home
+    url: /
+  - title: Tools
+    url: /tools/
+  - title: Components
+    url: /components/
+  - title: About
+    url: /about/
+  - title: CV
+    url: /cv/
+  - title: Signatures
+    url: /signatures/
+  - title: Projects
+    url: /projects/
+  - title: Blog
+    url: /blog/
+  - title: Blogspot
+    url: /blogspot/
+  - title: Archive
+    url: /archive/
+  - title: Blogger Backup
+    url: /backup/blogger/
+  - title: C2 Backup
+    url: /backup/c2/
+
+# Blogspot restore cache (generated from Wayback snapshots).
+collections:
+  blogspot:
+    output: true
+    permalink: /blogspot/:path:output_ext
+  blogger_backup:
+    output: true
+    permalink: /backup/blogger/posts/:path/
+  tools:
+    output: true
+    permalink: /tools/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  references:
+    output: true
+    permalink: /references/:path/
+  games:
+    output: true
+    permalink: /games/:path/
