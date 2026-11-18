@@ -11,10 +11,12 @@ Build the site into an out-of-source directory (git ignored) so nginx can serve 
 
 - `bundle install`
 - `JEKYLL_ENV=production bundle exec jekyll build --destination build/site`
+- `sudo ./scripts/publish.py install --env prod`
 
 For RST-enabled builds, include the extra config:
 
 - `JEKYLL_ENV=production bundle exec jekyll build --destination build/site --config _config.yml,_config.rst.yml`
+- `sudo ./scripts/publish.py install --env prod`
 
 Point nginx at `build/site` as the site root.
 
