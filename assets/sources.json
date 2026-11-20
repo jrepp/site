@@ -1,0 +1,15 @@
+{
+  "github": "https://github.com/jrepp",
+  "github_api": "https://api.github.com/users/jrepp",
+  "linkedin": {
+    "url": "https://www.linkedin.com/in/jacobrepp",
+    "reviewed": "2026-11-17",
+    "method": "Public search-indexed profile. Direct anonymous access returned HTTP 999.",
+    "facts_used": ["Builder and leader", "More than 20 years of experience building games and platforms"],
+    "refresh": "Manually review public profile and edit scripts/profile.html. No live LinkedIn synchronization."
+  },
+  "background": {
+    "source": "https://api.github.com/users/jrepp",
+    "facts_used": ["IBM", "HashiCorp (normalized spelling from bio)", "Blizzard Entertainment", "Microsoft", "CloudKitchens", "EA", "Game engines", "Distributed systems", "Embedded software", "Southern California"]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-11-18T01:25:53.761979+00:00",
+  "profile": {
+    "name": "Jacob Repp",
+    "login": "jrepp",
+    "location": "Southern California",
+    "company": "IBM",
+    "public_repos": 117,
+    "followers": 46,
+    "html_url": "https://github.com/jrepp"
+  },
+  "repos": [
+    {
+      "name": "jelligothci",
+      "description": "Portable C shapes MVP and virtual pet foundation with SDL and ESP32-S3 hosts",
+      "language": "C",
+      "stargazers_count": 2,
+      "html_url": "https://github.com/jrepp/jelligothci"
+    },
+    {
+      "name": "docuchango",
+      "description": "Agent/Human CMS grounding and management",
+      "language": "Python",
+      "stargazers_count": 5,
+      "html_url": "https://github.com/jrepp/docuchango"
+    },
+    {
+      "name": "merge-god",
+      "description": "Merge god dashboard, state management, MCP server",
+      "language": "TypeScript",
+      "stargazers_count": 0,
+      "html_url": "https://github.com/jrepp/merge-god"
+    },
+    {
+      "name": "ipv6-parse",
+      "description": "Fast and safe IPv6 string conversions, no dependencies, all RFCs (CIDR, embedded IPv4, etc), C, C++ and WebAssembly",
+      "language": "C",
+      "stargazers_count": 21,
+      "html_url": "https://github.com/jrepp/ipv6-parse"
+    },
+    {
+      "name": "lm-based",
+      "description": "Local based LLMs",
+      "language": "Python",
+      "stargazers_count": 0,
+      "html_url": "https://github.com/jrepp/lm-based"
+    },
+    {
+      "name": "mac-rom-atlas",
+      "description": "Knowledge atlas and reverse-engineering workspace for Old World Macintosh ROMs, SuperMario sources, disassembly overlays, and historical technical references.",
+      "language": "TypeScript",
+      "stargazers_count": 0,
+      "html_url": "https://github.com/jrepp/mac-rom-atlas"
+    }
+  ]
+}

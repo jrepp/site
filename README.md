@@ -1,4 +1,27 @@
-# jrepp.com (Jekyll)
+# jrepp.com profile
+
+The homepage is a standalone static profile served by nginx at `/srv/www/jrepp.com`
+on `t1.jrepp.com`. Older Jekyll pages remain available at their existing URLs.
+
+## Build and update
+
+- `python3 scripts/build_profile.py` builds from the checked-in snapshot, without network access.
+- `python3 scripts/build_profile.py --refresh` retrieves the public GitHub profile and six selected repositories before building.
+- Output: `build/profile/`. The generated root `index.html` also works with the existing Jekyll build.
+- Preview: `python3 -m http.server 4173 --bind 127.0.0.1 --directory build/profile`.
+- Edit `scripts/profile.html` for content, and `assets/profile.css` / `assets/profile.js` for presentation and live data.
+
+GitHub counts, location, project descriptions, languages, and stars refresh on visit using the unauthenticated public API, with an eight-second timeout. The rendered snapshot remains usable without JavaScript, when offline, or when rate limited. No credentials are sent to visitors. Project selection is curated in `scripts/build_profile.py`.
+
+LinkedIn is a manually reviewed public-profile summary, not a live API integration. Provenance and review date are in `assets/sources.json`. Review the public profile, update the template and review date, then rebuild. The portrait is a local copy of the public GitHub avatar.
+
+## Production
+
+Deploy only `build/profile/index.html` and `build/profile/assets/` into the existing nginx document root. Back up the existing document root first, stage assets before replacing `index.html`, and preserve archived URLs and nginx `.well-known` handling. This site uses the existing self-hosted domain, not Sites hosting or GitHub Pages.
+
+---
+
+## Historical Jekyll documentation
 
 ## Local dev
 
