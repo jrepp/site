@@ -17,9 +17,9 @@ LinkedIn is a manually reviewed public-profile summary, not a live API integrati
 
 ## Production
 
-Deploy only `build/profile/index.html` and `build/profile/assets/` into the existing nginx document root. Back up the existing document root first, stage assets before replacing `index.html`, and preserve archived URLs and nginx `.well-known` handling. This site uses the existing self-hosted domain, not Sites hosting or GitHub Pages.
+Build with `python3 scripts/build_profile.py`, then run `sudo python3 scripts/publish.py install --env prod` on the server. The publisher backs up the existing document root, installs profile assets first, and replaces the homepage last. It preserves archived URLs and nginx `.well-known` handling. The destination must already exist. This site uses the existing self-hosted domain, not GitHub Pages.
 
-The GitHub Actions workflow checks the profile and Jekyll build on `main` and pull requests; it does not deploy. The legacy `scripts/publish.py` replaces the entire document root, so do not use it for this profile deployment.
+The GitHub Actions workflow checks the profile and Jekyll build on `main` and pull requests; it does not deploy. Publish only from a current checkout containing the profile. Never use the old `svc install` rsync publisher, which replaces the entire document root.
 
 ---
 
