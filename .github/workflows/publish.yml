@@ -1,18 +1,13 @@
-name: Publish
+name: Build site
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -23,20 +18,11 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
-      - uses: actions/configure-pages@v5
-      - run: bundle exec jekyll build --destination build/site
+      - name: Verify profile snapshot
+        run: |
+          python3 scripts/build_profile.py
+          git diff --exit-code -- index.html
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --destination build/site
         env:
           JEKYLL_ENV: production
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: build/site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

@@ -19,6 +19,8 @@ LinkedIn is a manually reviewed public-profile summary, not a live API integrati
 
 Deploy only `build/profile/index.html` and `build/profile/assets/` into the existing nginx document root. Back up the existing document root first, stage assets before replacing `index.html`, and preserve archived URLs and nginx `.well-known` handling. This site uses the existing self-hosted domain, not Sites hosting or GitHub Pages.
 
+The GitHub Actions workflow checks the profile and Jekyll build on `main` and pull requests; it does not deploy. The legacy `scripts/publish.py` replaces the entire document root, so do not use it for this profile deployment.
+
 ---
 
 ## Historical Jekyll documentation
@@ -34,14 +36,10 @@ Build the site into an out-of-source directory (git ignored) so nginx can serve 
 
 - `bundle install`
 - `JEKYLL_ENV=production bundle exec jekyll build --destination build/site`
-- `sudo ./scripts/publish.py install --env prod`
 
 For RST-enabled builds, include the extra config:
 
 - `JEKYLL_ENV=production bundle exec jekyll build --destination build/site --config _config.yml,_config.rst.yml`
-- `sudo ./scripts/publish.py install --env prod`
-
-Point nginx at `build/site` as the site root.
 
 ## reStructuredText (RST)
 
